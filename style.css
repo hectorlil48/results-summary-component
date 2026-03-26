@@ -4,9 +4,49 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Neutral Colors */
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  /* Navy */
+  --navy-950: hsl(224, 30%, 27%);
+  --navy-200: hsl(241, 100%, 89%);
+  --navy-50: hsl(221, 100%, 96%);
+
+  /* Blue */
+  --blue-800: hsl(234, 85%, 45%);
+  --blue-50: hsl(234, 71%, 97%);
+
+  /* Yellow */
+  --yellow-400: hsl(39, 100%, 56%);
+  --yellow-50: hsl(38, 100%, 98%);
+
+  /* Red */
+  --red-400: hsl(0, 100%, 67%);
+  --red-50: hsl(0, 100%, 98%);
+
+  /* Green */
+  --green-500: hsl(166, 100%, 37%);
+  --green-50: hsl(162, 63%, 97%);
+
+  --result-gradient: linear-gradient(
+    to bottom,
+    hsla(256, 71%, 46%),
+    hsla(241, 72%, 46%, 0)
+  );
+
+  --background-gradient: linear-gradient(
+    to bottom,
+    hsla(252, 100%, 67%, 1),
+    hsla(241, 81%, 54%, 1)
+  );
+}
+
 body {
   min-height: 100vh;
-  background-color: red;
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: var(--navy-50);
 }
 
 /* .attribution { font-size: 11px; text-align: center; }

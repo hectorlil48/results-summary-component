@@ -204,6 +204,36 @@ body {
   outline-offset: 2px;
 }
 
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 686px;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .card__results {
+    border-radius: 0 32px 32px 0;
+    padding: 45px 69px;
+    flex: 0 0 338px;
+  }
+
+  .card__summary {
+    flex: 0 0 348px;
+  }
+
+  .card__results h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
 /* .attribution { font-size: 11px; text-align: center; }
 
 .attribution a { color: hsl(228, 45%, 44%); } */

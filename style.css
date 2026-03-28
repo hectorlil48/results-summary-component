@@ -255,6 +255,23 @@ body {
   .card__results p {
     font-size: 1.125rem;
   }
+
+  .card__summary {
+    padding: 44.5px 39.64px;
+  }
+
+  .card__summary h3 {
+    font-size: 1.5rem;
+  }
+
+  .card__summary ul {
+    margin: 2rem 0;
+  }
+
+  .card__item {
+    padding: 16.5px 16.68px;
+    font-size: 1.125rem;
+  }
 }
 
 /* .attribution { font-size: 11px; text-align: center; }

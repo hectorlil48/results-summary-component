@@ -195,6 +195,10 @@ body {
   cursor: pointer;
 }
 
+.card__button:hover {
+  background: var(--background-gradient);
+}
+
 /* .attribution { font-size: 11px; text-align: center; }
 
 .attribution a { color: hsl(228, 45%, 44%); } */

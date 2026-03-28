@@ -109,7 +109,7 @@ body {
   font-weight: var(--fw-bold);
   line-height: 1.3;
   color: var(--white);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .card__results p {
@@ -231,6 +231,29 @@ body {
   .card__results h1 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+  }
+
+  .card__score {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 2rem;
+  }
+
+  .card__score-number {
+    font-size: 4.5rem;
+  }
+
+  .card__score-total {
+    font-size: 1.125rem;
+  }
+
+  .card__results h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .card__results p {
+    font-size: 1.125rem;
   }
 }
 

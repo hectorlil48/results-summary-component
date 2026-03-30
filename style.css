@@ -196,6 +196,14 @@ body {
   transition: background 0.3s ease;
 }
 
+/* If user prefers reduced motion, disable or shorten transitions */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none; /* remove transition so background changes are instant */
+    /* Alternatively: transition-duration: 0.001s; to keep layout stable if needed */
+  }
+}
+
 .card__button:hover {
   background: var(--background-gradient);
 }
@@ -215,7 +223,7 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   body {
     display: flex;
     align-items: center;
@@ -282,7 +290,7 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .card {
     max-width: 736px;
   }

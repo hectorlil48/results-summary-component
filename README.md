@@ -1,6 +1,6 @@
 # Frontend Mentor - Results summary component solution
 
-This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -15,7 +15,6 @@ This is a solution to the [Results summary component challenge on Frontend Mento
   - [Useful resources](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -27,7 +26,6 @@ Users should be able to:
 
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
-- **Bonus**: Use the local JSON data to dynamically populate the content
 
 ### Screenshot
 
@@ -35,7 +33,7 @@ Users should be able to:
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
 
 Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
@@ -53,71 +51,100 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Working through this project reinforced several important frontend development concepts, especially in building clean, scalable, and responsive UI components.
 
-To see how you can add code snippets, see below:
+One of the biggest takeaways was the importance of creating a design system using CSS variables. By defining colors, font sizes, and font weights in the :root, I was able to keep my styles consistent and easy to maintain:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+:root {
+  --navy-950: hsl(224, 30%, 27%);
+  --fs-md: 1.125rem;
+  --fw-bold: 700;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+This approach made it much easier to update styles globally without searching the entire file.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I also focused on writing structured and reusable CSS using the BEM naming convention. This helped me organize styles clearly and avoid conflicts:
+
+```css
+.card__item {
+  display: flex;
+  justify-content: space-between;
+}
+.card__item-score {
+  font-weight: var(--fw-bold);
+}
+```
+
+Using BEM made the relationship between elements obvious and improved readability.
+
+Another key learning was building responsive layouts with Flexbox and media queries. I designed the layout to stack vertically on smaller screens and switch to a side-by-side layout on larger screens:
+
+```css
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+  }
+}
+```
+
+This reinforced how to think about layout changes across different screen sizes and how to structure components for flexibility.
+
+I also learned the importance of keeping spacing consistent rather than strictly following every value from the design file. In cases where tools like Figma provided fractional values (e.g., 56.5px), I rounded them to maintain a cleaner spacing system.
+
+Finally, I added small touches for accessibility and user experience, such as focus states for buttons:
+
+```css
+.card__button:focus-visible {
+  outline: 3px solid var(--navy-200);
+}
+```
+
+Overall, this project helped me move beyond just styling components and start thinking more about scalability, consistency, and real-world development practices. It gave me more confidence in structuring CSS for larger projects and preparing for frameworks like React.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+1. Advanced Responsive Design Techniques
+   I’m comfortable with Flexbox and basic media queries, but I want to get better at complex layouts that adapt smoothly to multiple breakpoints, including handling dynamic content without breaking the design.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+2. CSS Architecture & Reusability
+   Using BEM and a design system helped a lot, but I want to practice scaling these systems for larger projects. For example, creating reusable components with consistent spacing, typography, and color variants.
+
+3. Animations and Micro-Interactions
+   I want to refine my ability to add subtle, polished animations for hover states, button interactions, and loading states, without overdoing them or impacting performance.
+
+4. Accessibility and Semantic HTML
+   I added focus states and rounded some alt text practices, but I want to consistently apply accessible design patterns, including proper ARIA attributes and semantic markup for larger, interactive components.
+
+5. Spacing and Layout Consistency
+   Rounding fractional spacing values was a good start, but I want to get more comfortable with a full spacing scale and design tokens, so layouts feel intentional and cohesive across projects.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - It helps to check how padding and margin should be applied.
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+During this project, I used Claude AI to help guide some of my design and development decisions. Specifically, I used it to:
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+Think through style choices — for example, deciding on consistent spacing, color usage, and whether to round fractional values from the Figma design.
+Check accessibility — asking whether certain elements, like icons or buttons, needed proper alt text or focus states.
+Get feedback on my progress — validating that my approach to structuring CSS, using BEM, and building responsive layouts was on the right track.
 
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+What worked well:
+
+Claude AI helped me clarify decisions quickly without second-guessing myself.
+It was useful for confirming best practices and accessibility considerations.
+
+Overall, using AI as a coaching and advisory tool helped me make more confident, intentional design and development choices while building this project.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Hector Ramirez](https://www.hectorramirez.dev/https://www.your-site.com)
+- Frontend Mentor - [@hectorlil48](https://www.frontendmentor.io/profile/hectorlil48)
+- Github - [@hectorlil48](https://github.com/hectorlil48)
